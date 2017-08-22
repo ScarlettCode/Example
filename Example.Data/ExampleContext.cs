@@ -8,8 +8,8 @@ namespace Example.Data
         public DbSet<Blog> Blogs { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlite("Data Source=Promix.db");
-            optionsBuilder.UseInMemoryDatabase();
+            optionsBuilder.UseSqlite("Data Source=Example.db");
+            //optionsBuilder.UseInMemoryDatabase();
         }
 
         public class Blog
